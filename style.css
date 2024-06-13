@@ -1,0 +1,240 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* Color Variables */
+:root {
+    --primary-color: #3498db;
+    /* Blue */
+    --secondary-color: #2c3e50;
+    /* Dark Blue */
+    --accent-color-1: #18bc9c;
+    /* Green */
+    --accent-color-2: #e74c3c;
+    /* Red */
+    --light-color: #ecf0f1;
+    /* Light Gray */
+    --dark-color: #34495e;
+    /* Dark Gray */
+    --text-color: #2c3e50;
+    /* Dark Blue */
+}
+
+/* General Styling */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: var(--text-color);
+}
+
+/* Navbar*/
+.navbar {
+    background: linear-gradient(to top, var(--dark-color), var(--secondary-color));
+    margin-bottom: 0;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo {
+    max-height: 40px;
+    margin-right: 10px;
+}
+
+/* Navbar Links */
+.navbar-nav .nav-link {
+    color: var(--light-color);
+
+}
+
+.navbar-nav .nav-link:hover {
+    color: white !important;
+    transition: 1s;
+}
+
+
+.navbar-toggler {
+    border-color: transparent;
+}
+
+.navbar-toggler-icon {
+    background-color: white;
+    border-radius: 4px;
+    width: 30px;
+    height: 3px;
+    margin: 6px 0;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+}
+
+/* Header */
+.header {
+    background: url('images/img.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: var(--light-color);
+    height: 500px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+}
+
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.header h1 {
+    font-size: 4rem;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+}
+
+.header p {
+    font-size: 1.6rem;
+    margin: 0;
+    z-index: 1;
+    position: relative;
+}
+
+/* About Section */
+.about {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--accent-color-1));
+    padding: 50px 0;
+    color: var(--light-color);
+}
+
+.about .section-title,
+.about .section-text {
+    color: var(--light-color);
+}
+
+/* Our Services Section */
+.services {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--accent-color-1));
+    padding: 50px 0;
+    color: var(--light-color);
+}
+
+.services .col-md-4 i {
+    color: var(--accent-color-2);
+}
+
+.services .section-title,
+.services .section-text {
+    color: var(--light-color);
+}
+
+/* Portfolio Section */
+.portfolio {
+    background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
+    padding: 50px 0;
+    text-align: center;
+    color: var(--light-color);
+}
+
+.portfolio .row {
+    justify-content: center;
+}
+
+.portfolio .col-md-4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+}
+
+.portfolio img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border: 4px solid var(--light-color);
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.portfolio img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: 1s;
+}
+
+/* Team Section */
+.team {
+    background: linear-gradient(to bottom right, var(--accent-color-1), var(--accent-color-2));
+    padding: 50px 0;
+    color: var(--light-color);
+}
+
+.team .section-title {
+    color: var(--light-color);
+}
+
+.team img {
+    border: 4px solid var(--light-color);
+    border-radius: 50%;
+}
+
+/* Contact Section */
+.contact {
+    background: linear-gradient(to bottom right, var(--primary-color), var(--secondary-color));
+    padding: 50px 0;
+    color: var(--light-color);
+}
+
+.contact .form-control {
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+.contact .btn-primary {
+    background-color: var(--accent-color-2);
+    border-color: var(--accent-color-2);
+}
+
+.contact .btn-primary:hover {
+    background-color: var(--accent-color-1);
+    border-color: var(--accent-color-1);
+    transition: background-color 1s ease, border-color 1s ease;
+}
+
+
+/* Footer Section */
+.footer {
+    background: linear-gradient(to top, var(--dark-color), var(--secondary-color));
+    color: var(--light-color);
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2.5rem;
+    }
+
+    .header p {
+        font-size: 1.2rem;
+    }
+
+    .portfolio img {
+        height: 200px;
+    }
+}
